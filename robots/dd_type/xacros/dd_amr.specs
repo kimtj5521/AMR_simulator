@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<robot name="dd_amr" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:property name="base_mass" value="30.0" /> # kg
+<xacro:property name="base_len" value="0.80" /> # meter
+<xacro:property name="base_wid" value="0.70" /> # meter
+<xacro:property name="base_hgt" value="0.80" /> # meter
+
+<xacro:property name="wheel_mass" value="3.5" /> # kg
+<xacro:property name="wheel_rad" value="0.065" /> # meter
+<xacro:property name="wheel_wid" value="0.05" /> # meter
+<xacro:property name="wheel_base" value="0.80" /> # meter
+
+<xacro:property name="base_len_sq" value="${base_len * base_len}" />
+<xacro:property name="base_wid_sq" value="${base_wid * base_wid}" />
+<xacro:property name="base_hgt_sq" value="${base_hgt * base_hgt}" />
+<xacro:property name="wheel_rad_sq" value="${wheel_rad * wheel_rad}" />
+<xacro:property name="wheel_wid_sq" value="${wheel_wid * wheel_wid}" />
+
+</robot>

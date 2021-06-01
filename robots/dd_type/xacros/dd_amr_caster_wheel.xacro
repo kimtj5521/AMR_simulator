@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="dd_amr">
+
+    <xacro:macro name="caster_wheel" params="name parent *origin">
+    
+    <joint name="${name}_joint" type="fixed">
+        <xacro:insert_block name="origin" />
+        <axis xyz="0 0 0" />
+        <joint_properties damping="1." friction="1.0" />
+        <limit effort="1000.0" lower="-1e+16" upper="1e+16" velocity="3.5"/>
+        <parent link="${parent}" />
+        <child link="${name}_link" />
+    </joint>
+
+    <link name="${name}_link">
+        <inertial>
+            <mass value="1.4"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <!--inertia ixx="0.00499743171" ixy="0.00000004464" ixz="-0.00000002245"
+                    iyy="0.00499741733" iyz="-0.00000000164"
+                    izz="0.00839239692"/-->
+            <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+        </inertial>
+
+        <collision>
+            <geometry>
+                <sphere radius="0.065"/>
+            </geometry>
+        </collision>
+
+        <visual>
+            <geometry>
+                <sphere radius="0.065"/>
+                <!--mesh filename="package://amr_simulation/robots/meshes/AMR-CASTER-WHEEL.dae" scale="0.001 0.001 0.001"/-->
+            </geometry>
+        </visual>
+    </link>
+   
+    <gazebo reference="${name}_link">
+        <!--<mu1>0.5</mu1>
+        <mu2>0.2</mu2>-->
+        <mu1>0.1</mu1> 
+		<mu2>0.1</mu2>	
+	    <!--slip1>1.0</slip1>
+        <slip2>1.0</slip2-->
+    </gazebo>
+
+    </xacro:macro>
+  
+</robot>

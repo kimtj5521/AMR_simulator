@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="omni_amr">
+
+    <xacro:include filename="$(find amr_simulation)/robots/omni_type/xacros/materials.xacro"/>
+
+    <xacro:macro name="sick_laser" params="name parent *origin ros_topic">
+
+        <joint name="${name}_joint" type="fixed">
+            <axis xyz="1 0 1" />
+            <xacro:insert_block name="origin" />
+            <parent link="${parent}"/>
+            <child link="${name}_link"/>
+        </joint>
+
+        <link name="${name}_link" type="laser">
+            <inertial>
+                <mass value="0.001" />
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.000001" iyz="0" izz="0.0001" />
+            </inertial>
+
+            <visual>
+                <origin xyz="0 0 -0.06" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://amr_simulation/robots/omni_type/meshes/sick_tim571.dae"/>
+                </geometry>
+                <xacro:color_material color="black"/>
+            </visual>
+
+            <collision>
+                <origin xyz="0 0 -0.06" rpy="0 0 0" />
+                <geometry>
+                    <mesh filename="package://amr_simulation/robots/omni_type/meshes/sick_tim571.dae"/>                    
+                </geometry>
+            </collision>
+        </link>
+
+    </xacro:macro>
+
+
+</robot>

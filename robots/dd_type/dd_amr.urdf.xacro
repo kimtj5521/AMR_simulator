@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- Materials -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="dd_amr">
+
+<xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/dd_amr.gazebo" />
+
+<!-- Robot Hardware -->
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/dd_amr_body.xacro" />
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/dd_amr_fixed_wheel_left.xacro" />
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/dd_amr_fixed_wheel_right.xacro" />
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/dd_amr_caster_wheel.xacro" />
+
+<!-- SENSORS --> 
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/sick_tim571.xacro"/>
+  <xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/imu.xacro" />
+  <!--xacro:include filename="$(find amr_simulation)/robots/dd_type/xacros/camera.xacro"/-->
+  
+<!-- Macro -->
+  <xacro:amr_base name="base_link"/>
+  
+  <xacro:fixed_wheel_right name="amr_fixed_wheel_right" parent="base_link"/>
+  <xacro:fixed_wheel_left name="amr_fixed_wheel_left" parent="base_link"/>
+  
+  <xacro:caster_wheel name="amr_caster_wheel_front_left" parent="base_link">
+    <origin xyz="${wheel_base/2.0 - 0.07} 0.3 -0.4" rpy="0 0 0"/>    
+  </xacro:caster_wheel>
+
+  <xacro:caster_wheel name="amr_caster_wheel_back_left" parent="base_link">    
+    <origin xyz="-${wheel_base/2.0 - 0.07} 0.3 -0.4" rpy="0 0 0"/>
+  </xacro:caster_wheel>
+
+  <xacro:caster_wheel name="amr_caster_wheel_front_right" parent="base_link">
+    <origin xyz="${wheel_base/2.0 - 0.07} -0.3 -0.4" rpy="0 0 0"/>
+  </xacro:caster_wheel>
+
+  <xacro:caster_wheel name="amr_caster_wheel_back_right" parent="base_link">
+    <origin xyz="-${wheel_base/2.0 - 0.07} -0.3 -0.4" rpy="0 0 0"/>
+  </xacro:caster_wheel>
+
+  <!-- laser scanner link -->
+  <xacro:sick_laser name="laser_1" parent="base_link" ros_topic="/scan_1">
+    <origin xyz="0.41 -0.36 0.075" rpy="3.141592 0 -0.78539825"/>
+  </xacro:sick_laser>
+
+  <xacro:sick_laser name="laser_2" parent="base_link" ros_topic="/scan_2">
+    <origin xyz="-0.41 0.36 0.075" rpy="3.141592 0 2.35619475" />
+  </xacro:sick_laser>
+
+  <!-- IMU -->
+  <xacro:imu name="imu" parent="base_link">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:imu>
+  
+</robot>

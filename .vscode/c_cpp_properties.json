@@ -1,0 +1,51 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/tjk/test_ws/devel/include/**",
+                "/home/tjk/slam_ws/devel/include/**",
+                "/home/tjk/tag_ws/devel_isolated/realsense2_camera/include/**",
+                "/home/tjk/tag_ws/devel_isolated/apriltag_ros/include/**",
+                "/home/tjk/tag_ws/devel/include/**",
+                "/home/tjk/carto_ws/install_isolated/include/**",
+                "/home/tjk/catkin_ws/devel/include/**",
+                "/opt/ros/kinetic/include/**",
+                "/home/tjk/tag_ws/devel_isolated/apriltag/include/**",
+                "/home/tjk/catkin_ws/src/A-LOAM/include/**",
+                "/home/tjk/tag_ws/src/apriltag_ros/apriltag_ros/include/**",
+                "/home/tjk/test_ws/src/floam/include/**",
+                "/home/tjk/test_ws/src/intensity_slam/include/**",
+                "/home/tjk/catkin_ws/src/LeGO-LOAM/LeGO-LOAM/include/**",
+                "/home/tjk/test_ws/src/lio-mapping/include/**",
+                "/home/tjk/test_ws/src/loam_velodyne/include/**",
+                "/home/tjk/catkin_ws/src/microstrain_3dm_gx5/include/**",
+                "/home/tjk/slam_ws/src/ndt_omp/include/**",
+                "/home/tjk/catkin_ws/src/pcl_cpp_tutorial/include/**",
+                "/home/tjk/catkin_ws/src/pointgrey_camera_driver/pointgrey_camera_driver/include/**",
+                "/home/tjk/tag_ws/src/realsense-ros/realsense2_camera/include/**",
+                "/home/tjk/catkin_ws/src/sick_scan/include/**",
+                "/home/tjk/test_ws/src/tele_operate/include/**",
+                "/home/tjk/catkin_ws/src/tutorials/include/**",
+                "/home/tjk/catkin_ws/src/ublox/ublox_gps/include/**",
+                "/home/tjk/catkin_ws/src/ublox/ublox_msgs/include/**",
+                "/home/tjk/catkin_ws/src/ublox/ublox_serialization/include/**",
+                "/home/tjk/catkin_ws/src/usrg_irap_ad/include/**",
+                "/home/tjk/catkin_ws/src/velodyne/velodyne_driver/include/**",
+                "/home/tjk/catkin_ws/src/velodyne_height_map-master/include/**",
+                "/home/tjk/catkin_ws/src/velodyne/velodyne_laserscan/include/**",
+                "/home/tjk/catkin_ws/src/velodyne/velodyne_pointcloud/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu18",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

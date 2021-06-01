@@ -1,0 +1,7 @@
+image: museum_occ_2test.pbstream.pgm
+resolution: 0.010000
+origin: [-9.166592, -16.353777, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

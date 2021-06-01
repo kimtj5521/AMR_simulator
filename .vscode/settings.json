@@ -1,0 +1,22 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/tjk/test_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/slam_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel_isolated/realsense2_camera/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel_isolated/apriltag_ros/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/carto_ws/install_isolated/lib/python2.7/dist-packages",
+        "/home/tjk/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/tjk/test_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/slam_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel_isolated/realsense2_camera/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel_isolated/apriltag_ros/lib/python2.7/dist-packages",
+        "/home/tjk/tag_ws/devel/lib/python2.7/dist-packages",
+        "/home/tjk/carto_ws/install_isolated/lib/python2.7/dist-packages",
+        "/home/tjk/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/kinetic/lib/python2.7/dist-packages"
+    ]
+}

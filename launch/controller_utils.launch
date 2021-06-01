@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  
+    <!-- Fake Calibration -->
+    <node pkg="rostopic" type="rostopic" name="fake_joint_calibration"
+          args="pub /calibrated std_msgs/Bool true" />
+
+    <!-- Joint state controller -->
+    <!-- <node pkg="controller_manager" type="controller_manager" name="joint_state_controller_spawner"
+          args="$(find amr_simulation)/config/joint_state_controller.yaml" respawn="false" output="screen"/> -->
+
+    <node 
+      name="controller_spawner" 
+      pkg="controller_manager" 
+      type="spawner" 
+      respawn="false"
+      output="screen" 
+      args="$(find amr_simulation)/config/joint_state_controller.yaml"/>
+
+</launch>

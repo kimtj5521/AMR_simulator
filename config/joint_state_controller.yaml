@@ -1,0 +1,28 @@
+# # Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Position Controllers ---------------------------------------
+amr_fixed_upper_wheel_left_controller:
+  type: effort_controllers/JointPositionController
+  joint: amr_fixed_upper_wheel_left_joint
+  pid: {p: 4.0, i: 2.0, d: 0.5}
+
+amr_fixed_upper_wheel_right_controller:
+  type: effort_controllers/JointPositionController
+  joint: amr_fixed_upper_wheel_right_joint
+  pid: {p: 4.0, i: 2.0, d: 0.5}
+
+# Velocity Controllers ---------------------------------------
+amr_fixed_wheel_left_controller:
+  type: effort_controllers/JointVelocityController
+  joint: amr_fixed_wheel_left_joint
+  pid: {p: 5.0, i: 3.0, d: 0, i_clamp: 2.0}
+
+amr_fixed_wheel_right_controller:
+  type: effort_controllers/JointVelocityController
+  joint: amr_fixed_wheel_right_joint
+  pid: {p: 5.0, i: 3.0, d: 0, i_clamp: 2.0}
+
+  

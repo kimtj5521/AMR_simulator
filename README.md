@@ -2,8 +2,8 @@
 Autonomous Mobile Robot (AMR) ROS Gazebo simulator
 
 This repo contains two types of AMR: 
-Differential drive type
-Omni-directional drive type
+1. Differential drive type
+2. Omni-directional drive type
 
 ## How to build the simulator
 - Clone the repository and catkin_make:
